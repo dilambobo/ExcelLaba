@@ -6,7 +6,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="504.0"
             xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ecxellab.FirstPageController">
+            fx:controller="com.example.excellab.FirstPageController">
    <children>
       <Button fx:id="importButton"
               layoutX="302.0" layoutY="75.0" mnemonicParsing="false" text="import"

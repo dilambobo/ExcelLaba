@@ -1,3 +1,6 @@
+/**
+ *
+ */
 module com.example.ecxellab {
     requires javafx.controls;
     requires javafx.fxml;
@@ -10,7 +13,14 @@ module com.example.ecxellab {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires org.apache.poi.ooxml;
+    requires commons.math3;
+    requires org.apache.logging.log4j;
+    requires org.apache.poi.examples;
+    requires org.apache.poi.ooxml.schemas;
+    requires org.apache.poi.scratchpad;
+    requires org.apache.xmlbeans;
 
-    opens com.example.ecxellab to javafx.fxml;
-    exports com.example.ecxellab;
+    opens com.example.excellab to javafx.fxml;
+    exports com.example.excellab;
 }
