@@ -47,7 +47,8 @@ public class FirstPageController {
     }
 
     @FXML
-    protected void exportFile() {FileChooser fc = new FileChooser();
+    protected void exportFile() {
+        FileChooser fc = new FileChooser();
         File file = fc.showSaveDialog(null);
 
         try {

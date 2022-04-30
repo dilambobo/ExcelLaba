@@ -21,11 +21,8 @@ public class ImportFromExcel {
 
         int variant = 4; // мой номер в списке
 
-        if (workbook.getNumberOfSheets() > 7) {
-            sheet = workbook.getSheetAt(variant - 1);
-        } else {
-            sheet = workbook.getSheetAt(0);
-        }
+        sheet = workbook.getSheetAt(variant - 1);
+
 
         int numLastCol = sheet.getRow(0).getLastCellNum();
 

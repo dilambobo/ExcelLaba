@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class ExportToExcel {
 
-    public static void fillingFinalTable(String[] arrNames, LinkedHashMap lhm, File file) throws IOException {
+    public static void fillingFinalTable(String[] arrNames, LinkedHashMap linkedHashMap, File file) throws IOException {
 
         String surname = "Zorina";
 
@@ -31,7 +31,7 @@ public class ExportToExcel {
         }
 
         // Занесение числовых значений
-        Set set = lhm.entrySet();
+        Set set = linkedHashMap.entrySet();
         Iterator iterator = set.iterator();
         int i = 1;
         while (iterator.hasNext()) {

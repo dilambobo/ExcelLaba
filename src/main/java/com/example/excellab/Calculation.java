@@ -20,7 +20,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             geometricMean[i] = StatUtils.geometricMean(arr[i]);
         }
-        linkedHashMap.put("Среднее геометрическое", geometricMean);
+        linkedHashMap.put("geometricMean", geometricMean);
     }
 
     // Среднее арифметическое
@@ -29,7 +29,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             arithmeticMean[i] = StatUtils.mean(arr[i]);
         }
-        linkedHashMap.put("Среднее арифметическое", arithmeticMean);
+        linkedHashMap.put("arithmeticMean", arithmeticMean);
     }
 
     //  Оценка стандартного отклонения
@@ -38,7 +38,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             standardDeviation[i] = Math.sqrt(StatUtils.variance(arr[i]));
         }
-        linkedHashMap.put("Стандартное отклонение", standardDeviation);
+        linkedHashMap.put("standardDeviation", standardDeviation);
     }
 
     // 	Размах
@@ -47,7 +47,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             sampleSize[i] = StatUtils.max(arr[i]) - StatUtils.min(arr[i]);
         }
-        linkedHashMap.put("Размах", sampleSize);
+        linkedHashMap.put("sampleSize", sampleSize);
     }
 
     // Коэффициенты ковариации для всех пар случайных чисел
@@ -57,7 +57,7 @@ public class Calculation {
             covariance[i] = new Covariance().covariance(arr[i], arr[i + 1]);
         }
         covariance[arr.length - 1] = new Covariance().covariance(arr[arr.length - 1], arr[0]);
-        linkedHashMap.put("Коэффициенты ковариации", covariance);
+        linkedHashMap.put("covariance", covariance);
     }
 
     // Количество элементов в каждой выборке
@@ -66,7 +66,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             amount[i] = (double) arr[i].length;
         }
-        linkedHashMap.put("Количество элементов", amount);
+        linkedHashMap.put("amount", amount);
     }
 
     // Коэффициент вариации для каждой выборки
@@ -75,7 +75,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             variation[i] = Math.sqrt(StatUtils.variance(arr[i])) / Math.abs(StatUtils.mean(arr[i]));
         }
-        linkedHashMap.put("Коэффициент вариации", variation);
+        linkedHashMap.put("variation", variation);
     }
 
     // Доверительный интервал для мат. ожидания
@@ -84,7 +84,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             interval[i] = StatUtils.mean(arr[i]) - (new TDistribution(arr[i].length - 1).inverseCumulativeProbability(0.95) * Math.sqrt(StatUtils.variance(arr[i]))) / Math.sqrt(arr[i].length);
         }
-        linkedHashMap.put("-Доверительный интервал", interval);
+        linkedHashMap.put("minusInterval", interval);
     }
 
     private static void plusInterval(double[][] arr) {
@@ -92,7 +92,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             interval[i] = StatUtils.mean(arr[i]) + (new TDistribution(arr[i].length - 1).inverseCumulativeProbability(0.95) * Math.sqrt(StatUtils.variance(arr[i]))) / Math.sqrt(arr[i].length);
         }
-        linkedHashMap.put("+Доверительный интервал", interval);
+        linkedHashMap.put("plusInterval", interval);
     }
 
     // Оценка дисперсии для каждой выборки
@@ -101,7 +101,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             dispersion[i] = StatUtils.variance(arr[i]);
         }
-        linkedHashMap.put("Оценка дисперсии", dispersion);
+        linkedHashMap.put("dispersion", dispersion);
     }
 
     // Максимумы для каждой выборки
@@ -110,7 +110,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             max[i] = StatUtils.max(arr[i]);
         }
-        linkedHashMap.put("Максимумы", max);
+        linkedHashMap.put("max", max);
     }
 
     // Минимумы для каждой выборки
@@ -119,7 +119,7 @@ public class Calculation {
         for (int i = 0; i < arr.length; i++) {
             min[i] = StatUtils.min(arr[i]);
         }
-        linkedHashMap.put("Минимумы", min);
+        linkedHashMap.put("min", min);
     }
 
     public static void makeCalculation(double[][] arr) {
